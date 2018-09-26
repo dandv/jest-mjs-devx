@@ -1,0 +1,44 @@
+{
+  "name": "jest-mjs-terrible-devx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node --experimental-modules index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/?(*.)(spec|test).?(m)js?(x)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "mjs"
+    ],
+    "transform": {
+      "^.+\\.mjs$": "babel-jest"
+    }
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
+  }
+}
